@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Testimonials.css" />
+    <title>Web Design Mastery | Testimonials</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Miller Quinn</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Error.html">Error</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="testimonial">
+            <img src="keiths.jpg" alt="Image" class="testimonial-image">
+            <div class="testimonial-text">
+                <p>"your webpage projects impress with their creativity and seamless design. Each project showcases a perfect blend of aesthetics and functionality. From captivating CSS portraits to user-friendly web development, your work speaks volumes about their mastery in web design."</p>
+                <p class="name">-Dazel Keith</p>
+                
+            </div>
+        </div>
+    
+        <div class="testimonial">
+             <img src="keiths.jpg" alt="Image" class="testimonial-image">
+             <div class="testimonial-text">
+                 <p>At first, your webpage projects seemed lackluster, but they quickly impressed with their creativity and attention to detail. From captivating CSS portraits to user-friendly web development, their work is seamless and impressive.</p>
+                 <p class="name">-Dazel Keith</p>
+                 
+             </div>
+        </div>      
+    </div>
+      
+    <footer>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll(".testimonial");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            slides.forEach(slide => {
+                slide.style.display = "none";
+            });
+            slides[slideIndex].style.display = "block";
+        }
+
+        function moveSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
+

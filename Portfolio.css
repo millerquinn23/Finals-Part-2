@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #000000;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #ddd5e6;
+  --max-width: 1200px;
+  --background-color: #e4dcb2; /* Adjusted background color */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color); /* Applied background color */
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color); /* Applied background color */
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.project {
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: #ddd5e6; /* Purple background color */
+}
+
+.project h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.project p {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.project a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project a:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.back-to-home {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.back-to-home:hover {
+  color: var(--primary-color-dark);
+}
+
+
+
+
+
